@@ -1,0 +1,35 @@
+{{ define "content" }}
+  <section class="container projects-list">
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">
+          {{ .Title }}
+        </a>
+      </h1>
+    </header>
+
+    {{ with .Content }}
+      <div class="projects-intro">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <div class="projects-grid">
+      {{ range .Pages.ByDate.Reverse }}
+        <a class="project-card" href="{{ .RelPermalink }}">
+          <h2 class="project-title">
+            {{ .Title }}
+          </h2>
+
+          <p class="project-meta">
+            {{ .Date | time.Format "Jan 2006" }}
+            {{ with .Params.tags }}
+              · {{ delimit . ", " }}
+            {{ end }}
+          </p>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+

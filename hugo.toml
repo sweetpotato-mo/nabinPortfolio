@@ -1,0 +1,100 @@
+baseURL = "https://nabin001.com.np"
+title = "Nabin Shrestha"
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
+enableEmoji = true
+
+[pagination]
+pagerSize = 6
+
+[services]
+  [services.disqus]
+  # shortname = ""
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = "Nabin Shrestha"
+  description = "Computer Science Student @ UdS"
+  keywords = "portfolio,computer science,student,software engineering"
+  info = [
+    "Computer Science Student @ UdS",
+    "Saarbrücken, Germany",
+  ]
+  avatarURL = ""
+  dateFormat = "January 2, 2006"
+  since = 2024
+  colorScheme = "auto"
+  hideColorSchemeToggle = false
+
+  # Keep these arrays empty; we are injecting custom styles via layouts overrides,
+  # respecting the constraint to avoid custom files outside layouts/, content/, and hugo.toml.
+  customCSS = []
+  customSCSS = []
+
+  # Social icons (shown as buttons/icons on the homepage)
+  [[params.social]]
+    name = "Email"
+    icon = "fa-solid fa-envelope fa-2x"
+    weight = 0
+    url = "mailto:nabinstha5958@gmail.com"
+
+  [[params.social]]
+    name = "GitHub"
+    icon = "fa-brands fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/nabin001-np"
+
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "fa-brands fa-linkedin fa-2x"
+    weight = 2
+    url = "https://www.linkedin.com/in/nabin001-np"
+
+  [[params.social]]
+    name = "Website"
+    icon = "fa-solid fa-globe fa-2x"
+    weight = 3
+    url = "https://nabin001.com.np"
+
+  [[params.social]]
+    name = "Instagram"
+    icon = "fa-brands fa-instagram fa-2x"
+    weight = 4
+    url = "https://www.instagram.com/nabin.mo/"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+[languages.en]
+  languageName = "English"
+
+  [[languages.en.menu.main]]
+    name = "About"
+    weight = 0
+    url = "about/"
+
+  [[languages.en.menu.main]]
+    name = "Projects"
+    weight = 1
+    url = "projects/"
+
+  [[languages.en.menu.main]]
+    name = "Experience"
+    weight = 2
+    url = "experience/"
+
+  [[languages.en.menu.main]]
+    name = "Languages"
+    weight = 3
+    url = "languages/"
